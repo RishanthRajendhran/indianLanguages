@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Indian Languages
+        </title>
+        <meta charset="utf-8" />
+        <link href="{% static 'styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <nav id="navBar">
+            <div class="navBarItem">
+                <a href="{% url 'home' %}">
+                    <img src="{{MEDIA_URL}}/logo.png" class="navBarLogo" />
+                </a>
+            </div>
+            <div class="navBarItem">
+                <a href="{% url 'language:create' %}">
+                    create a new language ;)
+                </a>
+            </div>
+        </nav>
+        <div class="mainContainer">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

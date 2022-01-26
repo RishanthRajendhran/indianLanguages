@@ -1,0 +1,27 @@
+{% extends "common.html" %}
+
+{% block content %}
+<div class="languageCard">
+    <div id="gridImage">
+        <img src="{{language.thumb.url}}" />
+    </div>
+    <div id="gridGreeting">
+        {{ language.greetingInNativeScript }}
+    </div>
+    <div id="gridName">
+        <div>
+            <h2>
+                {{ language.nameInNativeScript }}
+            </h2>
+        </div>
+        <div>
+            <h4>
+                {{ language.name }}
+            </h4>
+        </div>
+    </div>
+    <div id="gridDescription">
+        {{ language.description }}
+    </div>
+</div>
+{% endblock %}

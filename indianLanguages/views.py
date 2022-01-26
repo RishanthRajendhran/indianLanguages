@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from language.models import Language
 
 def homeView(request):
-    return render(request, "home.html")
+    languages = Language.objects.all()
+    return render(request, "home.html", {"languages":languages})

@@ -1,0 +1,16 @@
+{% extends "common.html" %}
+
+{% block content %}
+
+<div class="langaugeCreate">
+    <h3>
+        Create a new language ;)
+    </h3>
+    <form method="post" action="{% url 'language:create' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create"/>
+    </form>
+</div>
+
+{% endblock %}
